@@ -8,12 +8,9 @@ namespace RemoteControl
         {
 
             int buttoninput;
-
+           
+            string[] commands = new string[10];
             int remotecontrolbuttoninput;
-            string usercommand0;
-            string usercommand1;
-            string usercommand2;
-            string usercommand3;
             Console.WriteLine("Lazy Lewis(tm) remote control. please select your required function");
             do
             {
@@ -33,30 +30,11 @@ namespace RemoteControl
                         Console.WriteLine("enter the button(-1) to end");
                         remotecontrolbuttoninput = Convert.ToInt32(Console.ReadLine());
 
-                        if (remotecontrolbuttoninput == 0)
+                        if (remotecontrolbuttoninput != -1)
                         {
                             Console.WriteLine("please enter the command");
-                            usercommand0 = Console.ReadLine();
-                            Console.WriteLine(usercommand0 +" set ");
-                        }
-                        if (remotecontrolbuttoninput == 1)
-                        {
-                            Console.WriteLine("please enter the command");
-                            usercommand1 = Console.ReadLine();
-                            Console.WriteLine(usercommand1 +" set" );
-                        }
-                        if (remotecontrolbuttoninput == 2)
-                        {
-                            Console.WriteLine("please enter the command");
-                            usercommand2 = Console.ReadLine();
-                            Console.WriteLine(usercommand2 +" set");
-                        }
-                        if (remotecontrolbuttoninput == 3)
-                        {
-                            Console.WriteLine("please enter the command");
-                            usercommand3 = Console.ReadLine();
-                            Console.WriteLine(usercommand3 +" set");
-
+                          commands[remotecontrolbuttoninput]  = Console.ReadLine();
+                            Console.WriteLine(" set ");
                         }
 
 
@@ -65,6 +43,11 @@ namespace RemoteControl
                 if (buttoninput == 2)
                 {
                     Console.WriteLine("you have chosen to display the commands");
+
+                    for (int i = 0; i < 10; i++)
+                    {
+
+                    }
                 }
 
                 if (buttoninput == 3)
@@ -75,6 +58,7 @@ namespace RemoteControl
                     {
                         if (remotecontrolbuttoninput == 0)
                         {
+
                         }
                     } while (remotecontrolbuttoninput != -1);
                 }
