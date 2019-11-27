@@ -6,10 +6,12 @@ namespace RemoteControl
     {
         static void Main(string[] args)
         {
-
             int buttoninput;
-           
-            string[] commands = new string[10];
+            string[] commands = new string[10];  
+            for (int i = 0; i < 10; i++)
+            {
+                commands[i] = "unset";
+            }
             int remotecontrolbuttoninput;
             Console.WriteLine("Lazy Lewis(tm) remote control. please select your required function");
             do
@@ -46,7 +48,7 @@ namespace RemoteControl
 
                     for (int i = 0; i < 10; i++)
                     {
-
+                        Console.WriteLine(commands[i]);
                     }
                 }
 
@@ -56,10 +58,13 @@ namespace RemoteControl
                     remotecontrolbuttoninput = Convert.ToInt32(Console.ReadLine());
                     do
                     {
-                        if (remotecontrolbuttoninput == 0)
+
+                        if (remotecontrolbuttoninput != -1)
                         {
 
+                            Console.WriteLine(commands[remotecontrolbuttoninput] + "  has been executed");
                         }
+                        remotecontrolbuttoninput = Convert.ToInt32(Console.ReadLine());
                     } while (remotecontrolbuttoninput != -1);
                 }
             } while ( buttoninput != 4);
