@@ -23,7 +23,7 @@ namespace StackProject
         }
         public int Depth()
         {
-            return theStack[top];
+            return top;
         }
     } 
 }
