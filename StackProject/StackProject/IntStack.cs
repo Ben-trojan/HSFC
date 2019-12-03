@@ -16,10 +16,10 @@ namespace StackProject
             top++;
         }
 
-        public string Pop()
+        public int Pop()
         {
             top--;
-            return Convert.ToString(theStack[top]);
+            return theStack[top];
         }
         public int Depth()
         {
