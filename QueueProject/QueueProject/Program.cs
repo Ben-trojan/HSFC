@@ -9,7 +9,8 @@ namespace QueueProject
             Console.WriteLine("Hello World! welcome to the queue!");
             int menuinput;
             QueueCreep myQueue = new QueueCreep();
-            myQueue.add(aName:);
+            string theName;
+            theName = Console.ReadLine();
             myQueue.remove();
             do
             {
@@ -23,11 +24,11 @@ namespace QueueProject
 
                 if (menuinput == 1)
                 {
-                    
+                    myQueue.add(theName);
                 }
                 if (menuinput == 2)
                 {
-
+                    myQueue.remove();
                 }
                 if (menuinput == 3)
                 {
