@@ -6,10 +6,10 @@ namespace QueueProject
 {
     class QueueCreep
     {
-        
-        string name;
-        
-
+        string[] contents = new string[10];
+      int front;
+      int back;
+      int length;
 
         public void add (string aName)
         {
@@ -17,13 +17,13 @@ namespace QueueProject
             Console.WriteLine("not implimented yet");
         
         }
-        public int remove()
+        public int Remove()
         {
             Console.WriteLine("not implemented yet");
             return 0;
         }
 
-        public int length()
+        public int Length()
         {
             Console.WriteLine("not implemented");
             return 0;

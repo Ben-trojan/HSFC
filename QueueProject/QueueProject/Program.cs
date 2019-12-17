@@ -10,8 +10,7 @@ namespace QueueProject
             int menuinput;
             QueueCreep myQueue = new QueueCreep();
             string theName;
-            theName = Console.ReadLine();
-            myQueue.remove();
+         
             do
             {
                 Console.WriteLine("please enter what you wish to do");
@@ -24,15 +23,18 @@ namespace QueueProject
 
                 if (menuinput == 1)
                 {
+                    Console.WriteLine("please type in the name");
+                    theName = Console.ReadLine();
                     myQueue.add(theName);
+
                 }
                 if (menuinput == 2)
                 {
-                    myQueue.remove();
+                    myQueue.Remove();
                 }
                 if (menuinput == 3)
                 {
-
+                    myQueue.Length();
                 }
                 if (menuinput == 4)
                 {
