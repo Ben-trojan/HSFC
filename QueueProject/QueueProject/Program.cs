@@ -26,7 +26,7 @@ namespace QueueProject
                     Console.WriteLine("please type in the name");
                     theName = Console.ReadLine();
                     myQueue.add(theName);
-
+                    Console.WriteLine("entered succesfully!");
                 }
                 if (menuinput == 2)
                 {
@@ -38,7 +38,7 @@ namespace QueueProject
                 }
                 if (menuinput == 4)
                 {
-
+                    myQueue.display();
                 }
 
             } while (menuinput != 5);

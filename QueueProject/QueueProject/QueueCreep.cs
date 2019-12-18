@@ -7,26 +7,46 @@ namespace QueueProject
     class QueueCreep
     {
         string[] contents = new string[10];
-      int front;
-      int back;
-      int length;
-
-        public void add (string aName)
+        int front = 0;
+        int back = 0;
+        int length = 0;
+        string name;
+        public void add(string aName)
         {
             name = aName;
-            Console.WriteLine("not implimented yet");
-        
+            if(length == 0)
+            {
+                contents[front] = name;
+            }
+            else
+            {
+                back = back + 1;
+                contents[back] = name;
+            }
+            length = length + 1;
         }
-        public int Remove()
+        public string Remove()
         {
-            Console.WriteLine("not implemented yet");
-            return 0;
+            string temp = contents[front];
+            contents[front] = "";
+            front = front + 1;
+            length = length - 1;
+            return temp;
         }
 
         public int Length()
         {
-            Console.WriteLine("not implemented");
-            return 0;
+            Console.WriteLine(length);
+
+            return length;
         }
-    }   
+
+        public void display()
+        {
+             for(int i = front; i <= back; i++)
+            {
+                Console.WriteLine(contents[i]);
+            }
+        }
+    }
 }
